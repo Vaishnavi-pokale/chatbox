@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Show Chat List</title>
+    <style>
+          body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #a87eed, #fd8eec);
+            text-align: center;
+            padding: 50px;
+            color: black;
+        }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 400px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        li {
+            background: rgba(255, 255, 255, 0.3);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        a {
+            color: #3a4442;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Chat List!!</h2>
+<ul>
+    {% for data in users %}
+    <li>{{data[1]}} <a href="/chat?receiver_id={{data[0]}}">chat</a></li>
+    {%endfor%}
+</ul>
+</body>
+</html>

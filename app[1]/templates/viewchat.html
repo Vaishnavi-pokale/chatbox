@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Boxx</title>
+</head>
+<body>
+
+    <h3>Send a Message</h3>
+    <form method="POST"  action="{{ url_for('getchat') }}" >
+          <input type="hidden" name="reciever_id" value="{{ reciever_id }}">
+        <textarea name="message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>
+
